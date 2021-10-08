@@ -14,6 +14,6 @@ RUN apt-get install -y nodejs
 
 # NOTE: we need to set HOME, because elm uses $HOME/.elm to save packages.
 #       if this doesn't persist between runs, you get CORRUPT BINARY errors.
-ENV HOME /app
+ENV HOME /code
 
-WORKDIR /app
+WORKDIR /code
