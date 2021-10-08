@@ -1,1 +1,2 @@
-sudo docker run --rm -it -v ${pwd}:/app -e http_proxy=$http_proxy -e https_proxy=$https_proxy elm_practice_elm init
+sudo docker run --rm -it -v ${pwd}:/code -e http_proxy=$http_proxy -e https_proxy=$https_proxy elm_practice_elm init
+alias elm='docker run -it --rm -v "$(pwd):/code" -w "/code" -e http_proxy=$http_proxy -e https_proxy=$https_proxy -e "HOME=/tmp" -u $UID:$GID -p 8000:8000 codesimple/elm:0.19'

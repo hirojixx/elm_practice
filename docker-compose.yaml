@@ -1,7 +1,11 @@
 version: '3.7'
 services:
   elm:
-    build: .
+    build:
+      context: .
+      args:
+        - http_proxy=${http_proxy}
+        - https_proxy=${https_proxy}
     volumes:
       - .:/app
     command: init
