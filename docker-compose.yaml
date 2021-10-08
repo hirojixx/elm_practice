@@ -1,0 +1,9 @@
+version: '3.7'
+services:
+  elm:
+    build: .
+    volumes:
+      - .:/app
+    command: init
+    ports:
+      - 8080:8080
